@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    background-color: #274e9b;
+}
+
+.wrapper {
+    width: 600px;
+    height: 600px;
+    background-color: #ffffff;
+}
+.inner {
+    display: flex;
+    justify-content: center;
+}
+
+.opacity {
+    animation: opacity 1s linear;
+}
+
+@keyframes opacity {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}

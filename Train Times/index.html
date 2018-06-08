@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Times</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="head">
+        <h1>TFGM
+            <i class="fas fa-train"></i>
+        </h1>
+    </div> <!--
+    <ul class="timetable-tabs clear">
+        <li class="departing active">
+            <span>Departing</span> | </li>
+        <li class="arriving">
+            <a>Arriving</a>
+        </li>
+    </ul>
+    <div class="live-trains clear">
+        <div class="live-trains-right clear">
+            <form id="ldbCommand" action="/service/ldbboard/update" method="post">
+                <input type="hidden" name="commandName" value="ldbCommand" class="accessibility">
+                <span class="accessibility">
+                    <input id="depArrHidFlag" name="departures" type="hidden" value="true">
+                </span>
+                <div class="valid-clear">
+                    <label id="train-action-first" for="train-from">
+                        <span class="hidden">departing</span>from</label>
+                    <span class="input-border">
+                        <input id="train-from" name="mainStation.searchTerm" class="text predictText ac_input" type="text" value="Manchester Victoria"
+                            autocomplete="off" spellcheck="false" style="color: rgb(85, 85, 85);">
+                        <span class="sp-icon-holder " style="height: 16px;">&nbsp;</span>
+                    </span>
+                </div>
+                <div class="valid-clear">
+                    <label id="train-action-second" for="train-to">to
+                        <span class="accessibility">this field is optional</span>
+                    </label>
+                    <span class="input-border">
+                        <input id="train-to" name="filterStation.searchTerm" class="text predictText ac_input" type="text" value="Manchester Airport"
+                            autocomplete="off" spellcheck="false" style="color: rgb(85, 85, 85);">
+                        <span class="sp-icon-holder " style="height: 16px;">&nbsp;</span>
+                    </span>
+                </div>
+                <button type="submit" class="button">
+                    <span>Update</span>
+                </button>
+                <div>
+                </div>
+            </form>
+        </div>
+    </div> -->
+    <button onclick="refresh()">
+            <span>Update</span>
+    </button>
+    <div class="crap">
+        <p id="shit"></p>
+    </div>
+    <div class="tbl-cont">
+        <table cellpadding="0" cellspacing="0" border="1">
+            <thead>
+                <tr>
+                    <th width="10%">Due</th>
+                    <th width="45%" class="destination">Destination</th>
+                    <th width="20%">Status</th>
+                    <th width="10%">Platform</th>
+                    <th width="15%">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="firstRow delayed">
+                    <td class="status status-delay"></td>
+                    <td class="destination">
+                        Manchester Airport&nbsp;
+                    </td>
+                    <td class="status status-delay">
+                        <br>
+                        <span>7&nbsp;
+                            <abbr title="minutes">mins</abbr> late</span>
+                    </td>
+                    <td>3</td>
+                    <td>
+                        <a href="/service/ldbdetails/IZLfEHU9afyjvnA%2BdAj5ng%3D%3D?f=MIA">Details
+                            <span>for the 12:09</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="alt">
+                    <td>12:39</td>
+                    <td class="destination">
+                        Manchester Airport&nbsp;
+                    </td>
+                    <td class="status">On time</td>
+                    <td>3</td>
+                    <td>
+                        <a href="/service/ldbdetails/68b%23M7KWS0cJvnufgXoGrA%3D%3D?f=MIA">Details
+                            <span>for the 12:39</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13:09</td>
+                    <td class="destination">
+                        Manchester Airport&nbsp;
+                    </td>
+                    <td class="status">On time</td>
+                    <td></td>
+                    <td>
+                        <a href="/service/ldbdetails/dXrEr9FVPwpXihWLZEWtAA%3D%3D?f=MIA">Details
+                            <span>for the 13:09</span>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="alt">
+                    <td>13:39</td>
+                    <td class="destination">
+                        Manchester Airport&nbsp;
+                    </td>
+                    <td class="status">On time</td>
+                    <td></td>
+                    <td>
+                        <a href="/service/ldbdetails/QLxSRESv7BiZg3yQQaM%238g%3D%3D?f=MIA">Details
+                            <span>for the 13:39</span>
+                        </a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
